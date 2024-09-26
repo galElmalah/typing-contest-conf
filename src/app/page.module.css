@@ -163,3 +163,50 @@ a.secondary {
     filter: invert();
   }
 }
+
+@keyframes blinker {
+  50% {
+    text-decoration: underline;
+  }
+}
+
+.text {
+  font-size: 30px;
+  font-weight: 600;
+  .cursor {
+    animation: blinker 0.8s linear infinite;
+  }
+
+  .correct {
+    color: rgb(62, 206, 62);
+  }
+
+  .incorrect {
+    color: rgb(241, 68, 68);
+  }
+}
+
+.timer {
+  color: #f2f2f2;
+  background-color: #383838;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 auto;
+  .start {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #e2e2e2;
+    }
+  }
+}
